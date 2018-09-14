@@ -1,0 +1,2 @@
+Command Line : C:\Users\Rennie\Documents\GitHub\Object-Oriented-Software-Development-using-C--11--BTP305-\Labs\Lab 1\Debug\Lab_1.exe 
+Insufficient number of arguments
