@@ -1,0 +1,7 @@
+I thought javascript was the only language I knew that had "static" variables and was happy to learn that
+C++ has similar functionalities.
+
+External linkage is something that would of took me forever to understand but this workshop made it a breeze.
+
+I knew about global variables before but was discouraged from using them due to general advice around the internet.
+Due to this I was not fully familar with how extern is a useful tool when declaring them.

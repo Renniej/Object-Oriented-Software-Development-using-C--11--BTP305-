@@ -1,0 +1,11 @@
+Size_T is similar to a unsigned int which makes sense if your taking the size of an object there is no need to
+have it be a negative number.  
+
+Unsigned ints use half the space because they do not care about values under 0;
+
+Move constructor is similar to a copy constructor except your shallow copying and then cutting the copied data from
+its parent object.
+
+&& = object close to death 
+
+Relearned file reading.

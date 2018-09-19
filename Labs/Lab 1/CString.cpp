@@ -18,7 +18,7 @@ namespace w1 {
 	CString::CString() : m_MAX(0)
 	{
 		char * m_STRING = new char[1];
-		m_STRING[0] = '/0';
+		m_STRING[0] = '\0';
 	}
 
 	CString::CString(const char * STRING) : m_MAX(STORED)

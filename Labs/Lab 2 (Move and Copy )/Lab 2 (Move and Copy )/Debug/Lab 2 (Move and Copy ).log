@@ -1,0 +1,3 @@
+﻿  Text.cpp
+c:\users\rennie\documents\github\object-oriented-software-development-using-c--11--btp305-\labs\lab 2 (move and copy )\lab 2 (move and copy )\text.cpp(159): warning C4715: 'w2::Text::operator=': not all control paths return a value
+  Lab 2 (Move and Copy ).vcxproj -> C:\Users\Rennie\Documents\GitHub\Object-Oriented-Software-Development-using-C--11--BTP305-\Labs\Lab 2 (Move and Copy )\Debug\Lab 2 (Move and Copy ).exe

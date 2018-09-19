@@ -1,6 +1,5 @@
-﻿  CString.cpp
-c:\users\rennie\documents\github\object-oriented-software-development-using-c--11--btp305-\labs\lab 1\cstring.cpp(21): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\rennie\documents\github\object-oriented-software-development-using-c--11--btp305-\labs\lab 1\cstring.cpp(21): warning C4309: '=': truncation of constant value
-c:\users\rennie\documents\github\object-oriented-software-development-using-c--11--btp305-\labs\lab 1\cstring.cpp(38): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\string.h(337): note: see declaration of 'strncpy'
+﻿  process.cpp
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  w1.cpp
   Lab 1.vcxproj -> C:\Users\Rennie\Documents\GitHub\Object-Oriented-Software-Development-using-C--11--BTP305-\Labs\Lab 1\Debug\Lab 1.exe
