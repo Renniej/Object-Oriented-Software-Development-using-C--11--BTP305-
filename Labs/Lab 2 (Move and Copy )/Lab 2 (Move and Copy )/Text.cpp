@@ -11,11 +11,6 @@
 #include "Text.h"
 
 
-
-
-
-
-
 namespace w2 {
 
 	void Text::SetToEmpty()// Sets object to empty
@@ -150,8 +145,11 @@ namespace w2 {
 			m_Line_Count = source.m_Line_Count;
 
 			delete[] m_Text;
+			
 
 			m_Text = source.m_Text;
+
+			source.m_Text = nullptr;
 
 		}
 
@@ -169,7 +167,8 @@ namespace w2 {
 
 	Text::~Text()
 	{
-		delete[] m_Text;
+			delete[] m_Text;
+		
 	}
 
 
