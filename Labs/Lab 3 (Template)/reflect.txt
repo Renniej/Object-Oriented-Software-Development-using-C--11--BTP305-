@@ -1,0 +1,4 @@
+I learnt what the best way for me to go about making template classes
+-Create the class for one type first to check for any errors then change it to template
+
+Also understood how template functions within template functions deal with each other using the main.cpp.

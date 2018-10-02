@@ -1,2 +1,4 @@
 ﻿  Source.cpp
-  Lab 3 (Template).vcxproj -> C:\Users\Rennie\Documents\GitHub\Object-Oriented-Software-Development-using-C--11--BTP305-\Labs\Lab 3 (Template)\Debug\Lab 3 (Template).exe
+l:\documents\github\object-oriented-software-development-using-c--11--btp305-\labs\lab 3 (template)\lab 3 (template)\source.cpp(38): warning C4018: '<': signed/unsigned mismatch
+l:\documents\github\object-oriented-software-development-using-c--11--btp305-\labs\lab 3 (template)\lab 3 (template)\source.cpp(62): warning C4018: '<': signed/unsigned mismatch
+  Lab 3 (Template).vcxproj -> L:\Documents\GitHub\Object-Oriented-Software-Development-using-C--11--BTP305-\Labs\Lab 3 (Template)\Debug\Lab 3 (Template).exe
