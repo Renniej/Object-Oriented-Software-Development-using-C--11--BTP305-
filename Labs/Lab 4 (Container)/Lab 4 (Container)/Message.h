@@ -2,6 +2,9 @@
 #define w4_MESSAGE_H
 
 #include <iostream>
+#include <string>
+#include <fstream>
+#include <istream>
 
 namespace w4 {
 
@@ -15,12 +18,13 @@ namespace w4 {
 	public:
 		Message();
 		Message(std::ifstream& in, char c);
-	/*	Message(const Message&);
+		Message(const Message&);
 		Message(Message&&);
+	
 
 		Message& operator=(const Message&);
 		Message& operator=(Message&&);
-*/
+
 
 		~Message();
 
@@ -28,7 +32,7 @@ namespace w4 {
 		bool empty() const;
 
 		void display(std::ostream&) const;
-
+		void testContents() const;
 	};
 }
 
