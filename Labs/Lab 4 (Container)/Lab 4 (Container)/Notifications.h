@@ -23,7 +23,7 @@ namespace w4 {
 		void operator=( Notifications&& src);
 		void operator=(const Notifications& src);
 		void operator+=(const Message& msg);
-		void display(std::ostream os) const;
+		void display(std::ostream& os) const;
 
 	};
 

@@ -1,6 +1,6 @@
 #include "Notifications.h"
 
-const int MAX_MESSAGES = 10;
+const size_t MAX_MESSAGES = 10U;
 
 namespace w4 {
 
@@ -78,27 +78,31 @@ namespace w4 {
 
 			if (!msg.empty()) {
 
-				Message* tmp_msgs = new Message[m_Num_Of_Msgs + 1];
-				
-				for (size_t i = 0U; i < m_Num_Of_Msgs; ++i) {
+				if (m_Num_Of_Msgs != 0) {
+					Message* tmp_msgs = new Message[m_Num_Of_Msgs + 1];
 
-					tmp_msgs[i] = std::move(m_msgs[i]);
+					for (size_t i = 0U; i < m_Num_Of_Msgs; ++i) {
+
+						tmp_msgs[i] = std::move(m_msgs[i]);
+
+					}
+
+					tmp_msgs[++m_Num_Of_Msgs] = msg;
+
+					m_msgs = tmp_msgs;
+					tmp_msgs = nullptr;
 
 				}
-
-				tmp_msgs[++m_Num_Of_Msgs] = msg;
-
-				m_msgs = tmp_msgs;
-				tmp_msgs = nullptr;
-
-
+				else {
+					m_msgs = new Message(msg);
+				}
 			}
 
 		}
 
 
 	}
-	void Notifications::display(std::ostream os) const
+	void Notifications::display(std::ostream& os) const
 	{
 
 		os << "Notifications" << std::endl << "=============" << std::endl << std::endl;

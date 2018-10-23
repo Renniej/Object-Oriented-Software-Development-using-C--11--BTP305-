@@ -1,6 +1,7 @@
-
+#include <cstring>
 #include "Message.h"
 
+using namespace std;
 
 namespace w4 {
 
@@ -105,8 +106,7 @@ namespace w4 {
 
 	Message::~Message()
 	{
-		delete[] m_User;
-		delete[] m_Message;
+	
 	}
 
 	bool Message::empty() const

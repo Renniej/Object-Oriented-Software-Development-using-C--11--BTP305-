@@ -1,6 +1,5 @@
-﻿  Notifications.cpp
+﻿  Message.cpp
+  Notifications.cpp
   Source.cpp
-l:\documents\github\object-oriented-software-development-using-c--11--btp305-\labs\lab 4 (container)\lab 4 (container)\source.cpp(52): error C2280: 'std::basic_ostream<char,std::char_traits<char>>::basic_ostream(const std::basic_ostream<char,std::char_traits<char>> &)': attempting to reference a deleted function
-  c:\program files\visual studio\vc\tools\msvc\14.14.26428\include\ostream(83): note: see declaration of 'std::basic_ostream<char,std::char_traits<char>>::basic_ostream'
-  c:\program files\visual studio\vc\tools\msvc\14.14.26428\include\ostream(83): note: 'std::basic_ostream<char,std::char_traits<char>>::basic_ostream(const std::basic_ostream<char,std::char_traits<char>> &)': function was explicitly deleted
   Generating Code...
+  Lab 4 (Container).vcxproj -> L:\Documents\GitHub\Object-Oriented-Software-Development-using-C--11--BTP305-\Labs\Lab 4 (Container)\Debug\Lab 4 (Container).exe
