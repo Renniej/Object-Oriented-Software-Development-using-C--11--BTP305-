@@ -1,6 +1,8 @@
 #include "Message.h"
-#pragma warning(disable:4996)
 
+
+
+using namespace std;
 namespace w4 {
 
 
@@ -34,7 +36,7 @@ namespace w4 {
 
 			std::getline(ifs, tmp, c); //grab single line of file
 				
-			std::cout << "Line grabbed from file: " << tmp << std::endl;
+			//std::cout << "Line grabbed from file: " << tmp << std::endl;
 
 
 			//Grab User Name from line
@@ -83,11 +85,23 @@ namespace w4 {
 
 	}
 
+
+	void Message::Deallocate() {
+
+		
+			delete[] m_User;
+			m_User = nullptr;
+			delete[] m_Message;
+			m_Message = nullptr;
+
+			delete[] m_Reply;
+			m_Reply = nullptr;
+	
+	}
+
 	Message::~Message()
 	{
-		delete[] m_User;
-		delete[] m_Message;
-		delete[] m_Reply;
+		//Deallocate();
 	}
 
 	bool Message::empty() const
@@ -102,17 +116,56 @@ namespace w4 {
 		if (!empty()) {
 
 			os << "Message" << std::endl;
-			os << " User : " << m_User << std::endl;
+			os << " User  : " << m_User << std::endl;
 
 			if (m_Reply != nullptr) {
 				os << " Reply : " << m_Reply << std::endl;
 			}
 
-			os << " Tweet : " << m_Message << std::endl;
+			os << " Tweet :" << m_Message << std::endl;
 
 
 
 		}
 
+	}
+	Message& Message::operator=(const Message & src)
+	{
+		
+		if (this != &src) {
+
+			delete[] m_User;
+			m_User = nullptr;
+
+			delete[] m_Reply;
+			m_Reply = nullptr;
+
+			delete[] m_Message;
+			m_Message = nullptr;
+
+			if (!src.empty()) {
+
+				m_User = new char[strlen(src.m_User) + 1];
+				strcpy(m_User, src.m_User);
+
+				if (src.m_Reply != nullptr) {
+
+					m_Reply = new char[strlen(src.m_Reply) + 1];
+					strcpy(m_Reply, src.m_Reply);
+
+				}
+
+				m_Message = new char[strlen(src.m_Message) + 1];
+				strcpy(m_Message, src.m_Message);
+
+			}
+			else {
+
+				SetToEmpty();
+
+			}
+		}
+
+		return *this;
 	}
 }

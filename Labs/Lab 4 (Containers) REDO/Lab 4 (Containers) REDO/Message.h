@@ -1,4 +1,4 @@
-#ifndef W4_MESSSAGE_H
+#ifndef W4_MESSAGE_H
 #define W4_MESSAGE_H
 
 #include <iostream>
@@ -23,12 +23,15 @@ namespace w4 {
 		Message();
 		Message(std::ifstream& in, char c);
 	
+		void Deallocate();
+
 		~Message();
 
 
 		bool empty() const;
 
 		void display(std::ostream& os) const;
+		Message& operator=(const Message& src);
 	};
 
 }

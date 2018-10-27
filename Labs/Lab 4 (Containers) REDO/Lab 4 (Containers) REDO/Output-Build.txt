@@ -1,0 +1,4 @@
+﻿1>------ Build started: Project: Lab 4 (Containers) REDO, Configuration: Debug Win32 ------
+1>Message.cpp
+1>Lab 4 (Containers) REDO.vcxproj -> C:\Users\Rennie\Documents\GitHub\Object-Oriented-Software-Development-using-C--11--BTP305-\Labs\Lab 4 (Containers) REDO\Debug\Lab 4 (Containers) REDO.exe
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
