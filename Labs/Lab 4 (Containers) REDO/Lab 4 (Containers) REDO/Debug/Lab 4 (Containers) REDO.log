@@ -1,2 +1,9 @@
-﻿  Message.cpp
-  Lab 4 (Containers) REDO.vcxproj -> C:\Users\Rennie\Documents\GitHub\Object-Oriented-Software-Development-using-C--11--BTP305-\Labs\Lab 4 (Containers) REDO\Debug\Lab 4 (Containers) REDO.exe
+﻿  main.cpp
+  Message.cpp
+  Notifications.cpp
+l:\documents\github\object-oriented-software-development-using-c--11--btp305-\labs\lab 4 (containers) redo\lab 4 (containers) redo\notifications.cpp(17): warning C4018: '<': signed/unsigned mismatch
+l:\documents\github\object-oriented-software-development-using-c--11--btp305-\labs\lab 4 (containers) redo\lab 4 (containers) redo\notifications.cpp(62): warning C4018: '<': signed/unsigned mismatch
+l:\documents\github\object-oriented-software-development-using-c--11--btp305-\labs\lab 4 (containers) redo\lab 4 (containers) redo\notifications.cpp(85): warning C4018: '<': signed/unsigned mismatch
+l:\documents\github\object-oriented-software-development-using-c--11--btp305-\labs\lab 4 (containers) redo\lab 4 (containers) redo\notifications.cpp(117): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  Lab 4 (Containers) REDO.vcxproj -> L:\Documents\GitHub\Object-Oriented-Software-Development-using-C--11--BTP305-\Labs\Lab 4 (Containers) REDO\Debug\Lab 4 (Containers) REDO.exe

@@ -12,6 +12,7 @@ namespace sict {
 	{
 		Letter * Grades;
 		float * Stud_IDs;
+		size_t Num_Of_Students;
 
 		void SetToEmpty();
 		void Deallocate();
@@ -19,7 +20,7 @@ namespace sict {
 
 	public:
 
-		Grade(std::ifstream os);
+		Grade(const char* Grade_file_name);
 		Grade();
 		~Grade();
 

@@ -9,6 +9,8 @@ namespace sict {
 
 
 	template<typename Letter> // Why template? IDK? Ask prof later
+
+
 	char& ToString(const Letter& letter) {
 			
 		char *  grade = new char[3];
@@ -27,7 +29,9 @@ namespace sict {
 
 			case Dp : strcpy(grade, "D+");
 
-			case F: strcpy(grade, "F");
+			case F : strcpy(grade, "F");
+
+			default: strcpy(grade, "E");
 
 		}
 

@@ -115,6 +115,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Grade.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Grade.h" />
+    <ClInclude Include="Letter.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

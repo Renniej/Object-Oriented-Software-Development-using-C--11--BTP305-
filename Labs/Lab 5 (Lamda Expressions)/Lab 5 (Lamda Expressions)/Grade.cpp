@@ -1,3 +1,6 @@
+#include <string>
+#include <iostream>
+#include <fstream>
 #include "Grade.h"
 
 namespace sict {
@@ -6,6 +9,7 @@ namespace sict {
 	{
 		Grades = nullptr;
 		Stud_IDs = nullptr;
+		Num_Of_Students = 0U;
 	}
 
 	void Grade::Deallocate()
@@ -18,6 +22,26 @@ namespace sict {
 	}
 
 
+
+	Grade::Grade(const char* Grade_file_name)
+	{
+
+		SetToEmpty();
+
+		std::ifstream file;
+
+		try
+		{
+			
+			file.open(Grade_file_name);
+		}
+		catch (...)
+		{
+			throw "File failed to open";
+		}
+
+
+	}
 
 	Grade::Grade()
 	{
