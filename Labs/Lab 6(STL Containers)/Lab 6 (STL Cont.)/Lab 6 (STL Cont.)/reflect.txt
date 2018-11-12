@@ -1,0 +1,7 @@
+Vectors seems like a much easier array/memory handling concept then standard c arrays.
+I especially like the push method as it makes life easier.
+
+Total vs display function was very tricky to figure out when it came to matching the output. I regret saying it
+but it took me longer then would of hope to figure out that it was just adding taxes.
+
+._. Enjoyable workshop overall
