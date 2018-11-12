@@ -10,7 +10,7 @@ namespace sict {
 
 	template<typename Letter> // Why template? IDK? Ask prof later
 
-
+	template<typename Letter>
 	char& ToString(const Letter& letter) {
 			
 		char *  grade = new char[3];

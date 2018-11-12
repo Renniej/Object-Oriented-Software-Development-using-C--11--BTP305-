@@ -1,0 +1,12 @@
+﻿  Grades.cpp
+  Generating Code...
+  Compiling...
+  w5.cpp
+c:\users\rennie\documents\github\object-oriented-software-development-using-c--11--btp305-\labs\lab 6 (stl container) redo\lab 6 (stl container) redo\grades.h(29): warning C4018: '<': signed/unsigned mismatch
+  c:\users\rennie\documents\github\object-oriented-software-development-using-c--11--btp305-\labs\lab 6 (stl container) redo\lab 6 (stl container) redo\w5.cpp(74): note: see reference to function template instantiation 'void sict::Grades::displayGrades<main::<lambda_e3df5cdcb104cbb4a39ad26ebdc90a40>>(std::ostream &,F)' being compiled
+          with
+          [
+              F=main::<lambda_e3df5cdcb104cbb4a39ad26ebdc90a40>
+          ]
+  Generating Code...
+  Lab 6 (STL Container) REDO.vcxproj -> C:\Users\Rennie\Documents\GitHub\Object-Oriented-Software-Development-using-C--11--BTP305-\Labs\Lab 6 (STL Container) REDO\Debug\Lab 6 (STL Container) REDO.exe

@@ -1,64 +1,47 @@
-#include <string>
-#include <iostream>
 #include <fstream>
+#include <string>
 #include "Grade.h"
+
 
 namespace sict {
 
-	void sict::Grade::SetToEmpty()
+	Grades::Grades()
 	{
-		Grades = nullptr;
-		Stud_IDs = nullptr;
-		Num_Of_Students = 0U;
 	}
 
-	void Grade::Deallocate()
-	{
-		delete[] Grades;
-		Grades = nullptr;
-		delete[] Stud_IDs;
-		Stud_IDs = nullptr;
-
-	}
-
-
-
-	Grade::Grade(const char* Grade_file_name)
+	Grades::Grades(std::string filename)
 	{
 
-		SetToEmpty();
 
-		std::ifstream file;
+		std::ifstream file(filename);
 
-		try
-		{
-			
-			file.open(Grade_file_name);
+		if (file.is_open()) {
+
+			std::string line;
+
+			while (file.good()) {
+
+
+				std::getline(file, line);
+
+				m_Stud_Nums.push_back("HELLO");
+
+
+
+			}
+
+
+
+
+
 		}
-		catch (...)
-		{
-			throw "File failed to open";
+		else {
+			throw "File did not open";
 		}
 
-
 	}
 
-	Grade::Grade()
+	Grades::~Grades()
 	{
-
-		SetToEmpty();
-
 	}
-
-
-	Grade::~Grade()
-	{
-		Deallocate();
-	}
-
-	bool Grade::empty() const
-	{
-		return (Grades == nullptr);
-	}
-
 }
