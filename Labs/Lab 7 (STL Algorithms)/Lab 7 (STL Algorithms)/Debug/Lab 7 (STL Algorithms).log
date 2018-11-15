@@ -1,2 +1,26 @@
-﻿  Source.cpp
-  Lab 7 (STL Algorithms).vcxproj -> C:\Users\Rennie\Documents\GitHub\Object-Oriented-Software-Development-using-C--11--BTP305-\Labs\Lab 7 (STL Algorithms)\Debug\Lab 7 (STL Algorithms).exe
+﻿  w7.cpp
+l:\documents\github\object-oriented-software-development-using-c--11--btp305-\labs\lab 7 (stl algorithms)\lab 7 (stl algorithms)\datatable.h(117): warning C4244: 'argument': conversion from 'double' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+  l:\documents\github\object-oriented-software-development-using-c--11--btp305-\labs\lab 7 (stl algorithms)\lab 7 (stl algorithms)\datatable.h(102): note: while compiling class template member function 'w7::DataTable<float>::DataTable(std::ifstream &,size_t,size_t)'
+  l:\documents\github\object-oriented-software-development-using-c--11--btp305-\labs\lab 7 (stl algorithms)\lab 7 (stl algorithms)\w7.cpp(32): note: see reference to function template instantiation 'w7::DataTable<float>::DataTable(std::ifstream &,size_t,size_t)' being compiled
+  l:\documents\github\object-oriented-software-development-using-c--11--btp305-\labs\lab 7 (stl algorithms)\lab 7 (stl algorithms)\w7.cpp(32): note: see reference to class template instantiation 'w7::DataTable<float>' being compiled
+l:\documents\github\object-oriented-software-development-using-c--11--btp305-\labs\lab 7 (stl algorithms)\lab 7 (stl algorithms)\datatable.h(118): warning C4244: 'argument': conversion from 'double' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+l:\documents\github\object-oriented-software-development-using-c--11--btp305-\labs\lab 7 (stl algorithms)\lab 7 (stl algorithms)\datatable.h(82): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
+  l:\documents\github\object-oriented-software-development-using-c--11--btp305-\labs\lab 7 (stl algorithms)\lab 7 (stl algorithms)\datatable.h(75): note: while compiling class template member function 'T w7::DataTable<T>::median(void) const'
+          with
+          [
+              T=float
+          ]
+  l:\documents\github\object-oriented-software-development-using-c--11--btp305-\labs\lab 7 (stl algorithms)\lab 7 (stl algorithms)\w7.cpp(52): note: see reference to function template instantiation 'T w7::DataTable<T>::median(void) const' being compiled
+          with
+          [
+              T=float
+          ]
+  Lab 7 (STL Algorithms).vcxproj -> L:\Documents\GitHub\Object-Oriented-Software-Development-using-C--11--BTP305-\Labs\Lab 7 (STL Algorithms)\Debug\Lab 7 (STL Algorithms).exe
