@@ -32,12 +32,24 @@ namespace w8 {
 
 		// TODO: Overload the += operator with a smart pointer
 		//       as a second operand.
+		List& operator+=(std::unique_ptr<T>& obj) {
 
+			list.push_back(std::move(obj));
+			return *this;
+
+		}
 
 
 		// TODO: Overload the += operator with a raw pointer
 		//       as a second operand.
+		List& operator+=(T* obj) {
 
+			T* tmp + new T;
+			*tmp = *obj;
+
+			list.push_back(tmp);
+			return *this;
+		}
 
 
 		void display(std::ostream& os) const {

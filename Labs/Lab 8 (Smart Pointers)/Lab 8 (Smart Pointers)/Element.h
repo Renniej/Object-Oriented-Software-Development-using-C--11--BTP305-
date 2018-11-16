@@ -87,7 +87,11 @@ namespace w8 {
 
 
 		// TODO: add the validate() function here
+		bool validate() { //check if price is not a negative number, else throw error
 
+			return price >= 0 ? true : throw "*** Negative prices are invalid ***";
+
+		}
 
 
         void display(std::ostream& os) const

@@ -1,4 +1,5 @@
 #include <memory>
+#include <algorithm>
 #include "List.h"
 #include "Element.h"
 #include "Utilities.h"
@@ -12,6 +13,8 @@ namespace w8
 		List<Product> priceList;
 		// TODO: Add your code here to build a list of products
 		//         using raw pointers
+
+	
 
 
 		return priceList;
