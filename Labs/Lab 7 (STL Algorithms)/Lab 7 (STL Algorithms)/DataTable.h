@@ -90,11 +90,11 @@ namespace w7 {
 
 		void regression(T& slope, T& y_intercept) const { //y=mx + B
 		
-			T mean_x = std::accumulate(m_x.begin(), m_x.end(), T(0)) / m_x.size(); //mean of x
-			T mean_X_t_Y = std::accumulate(m_y.begin(), m_y.end(), T(0), [&](T x, T y) {  return x + (y *  m_x[ std::distance(m_y.begin(), std::find(m_y.begin(), m_y.end(),  y))  ]);  }) / getSize(); //mean of x * y
-			T mean_Xsq = std::accumulate(m_x.begin(), m_x.end(), T(0), [](T x, T y) { return x + std::pow(y, 2); }) / m_x.size(); //mean of x^2
+			T mean_x = std::accumulate(m_x.begin(), m_x.end(), T(0)) / getSize(); //mean of x
+			T mean_X_t_Y = std::inner_product(m_y.begin(), m_y.end(), m_x.begin(), T(0)) / getSize();
+			T mean_Xsq = std::accumulate(m_x.begin(), m_x.end(), T(0), [](T x, T y) { return x + std::pow(y, 2); }) / getSize(); //mean of x^2
 
-			slope = (mean_x * mean() - mean_X_t_Y)/ ( std::pow(mean_x,2) - mean_Xsq ) ;
+			slope = (mean_x * mean() - mean_X_t_Y) / ( std::pow(mean_x,2) - mean_Xsq ) ;
 			y_intercept = mean() - slope * mean_x;
 
 		};
