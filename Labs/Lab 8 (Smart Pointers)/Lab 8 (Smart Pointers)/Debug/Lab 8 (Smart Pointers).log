@@ -1,3 +1,0 @@
-﻿  Source.cpp
-l:\documents\github\object-oriented-software-development-using-c--11--btp305-\labs\lab 8 (smart pointers)\lab 8 (smart pointers)\source.cpp(28): error C2039: 'Print': is not a member of 'Entity'
-  l:\documents\github\object-oriented-software-development-using-c--11--btp305-\labs\lab 8 (smart pointers)\lab 8 (smart pointers)\source.cpp(7): note: see declaration of 'Entity'
