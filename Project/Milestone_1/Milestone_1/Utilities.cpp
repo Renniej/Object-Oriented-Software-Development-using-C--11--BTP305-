@@ -37,7 +37,7 @@ const std::string Utilities::extractToken(const std::string & str, size_t & next
 		
 
 
-		std::cout << "LINE EXTRACTED: " << tmp << std::endl;
+		//std::cout << "LINE EXTRACTED: " << tmp << std::endl;
 
 		if (tmp.empty()) {
 			throw std::string("No data between delimiters!");
@@ -52,7 +52,7 @@ const std::string Utilities::extractToken(const std::string & str, size_t & next
 
 
 		next_pos = next_pos + tmp.length() + 1;
-		std::cout << "Next Position changed to : " << next_pos << std::endl;
+		//std::cout << "Next Position changed to : " << next_pos << std::endl;
 
 		more = true;
 		
