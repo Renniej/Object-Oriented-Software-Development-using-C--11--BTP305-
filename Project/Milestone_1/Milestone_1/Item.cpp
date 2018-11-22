@@ -75,7 +75,7 @@ void Item::updateQuantity()
 
 void Item::display(std::ostream & os, bool full)
 {
-	//Set os width after...
+	//Note: Learn how to format console better.......  (this took me way too long to finish)
 	if (full) {
 
 
