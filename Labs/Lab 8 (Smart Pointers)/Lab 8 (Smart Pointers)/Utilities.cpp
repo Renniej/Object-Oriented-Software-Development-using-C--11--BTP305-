@@ -2,6 +2,13 @@
 #include "List.h"
 #include "Element.h"
 #include "Utilities.h"
+// Name: Tai-Juan Rennie
+// Seneca Student ID: 101359172
+// Seneca email: trennie1@myseneca.ca
+// Date of completion: 11/22/2018
+//
+// I confirm that I am the only author of this file
+// and the content was created entirely by me.
 
 using namespace std;
 
@@ -23,6 +30,7 @@ namespace w8
 					Product* tmp = new Product(desc[i].desc, price[j].price);
 					tmp->validate();
 					priceList += tmp;
+					delete tmp;
 				}
 
 

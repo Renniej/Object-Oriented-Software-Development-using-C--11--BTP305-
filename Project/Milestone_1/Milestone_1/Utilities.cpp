@@ -1,7 +1,14 @@
+// Name: Tai-Juan Rennie
+// Seneca Student ID: 101359172
+// Seneca email: trennie1@myseneca.ca
+// Date of completion: 11/22/2018
+//
+// I confirm that I am the only author of this file
+// and the content was created entirely by me.
 #include "Utilities.h"
 
 
-std::string Utilities::m_delimiter = "|";
+char Utilities::m_delimiter = '|';
 
 void Utilities::setFieldWidth(size_t size)
 {
@@ -15,11 +22,11 @@ size_t Utilities::getFieldWidth() const
 	return m_widthField;
 }
 
-const std::string Utilities::extractToken(const std::string & str, size_t & next_pos, bool & more)
+const std::string Utilities::extractToken(const std::string & str, size_t & next_pos, bool & more) //sloppy coding, I personally think i can optimize this better....
 {
 	
 	more = false;
-	std::string tmp(str);
+	std::string tmp(str); 
 
 	if (tmp.length() > next_pos) { //check if next_pos is a valid postion in string first
 
@@ -30,6 +37,11 @@ const std::string Utilities::extractToken(const std::string & str, size_t & next
 
 			tmp = tmp.substr(0, tmp.find(m_delimiter));
 
+			if (m_widthField < tmp.length()) {
+				//std::cout << "Utility Length : " << m_widthField << " vs. " << "String Length[" << tmp << "] : " << tmp.length() << std::endl;
+				m_widthField = tmp.length();
+				//std::cout << "Utility Length changed to : " << m_widthField << std::endl << std::endl;
+			}
 
 		}
 		
@@ -46,10 +58,7 @@ const std::string Utilities::extractToken(const std::string & str, size_t & next
 
 
 
-		if (m_widthField < tmp.length()) {
-			m_widthField = tmp.length();
-		}
-
+		
 
 		next_pos = next_pos + tmp.length() + 1;
 		//std::cout << "Next Position changed to : " << next_pos << std::endl;
@@ -65,12 +74,19 @@ const std::string Utilities::extractToken(const std::string & str, size_t & next
 
 }
 
+
+
 void Utilities::setDelimiter(const char c)
 {
 	
 		m_delimiter = c;
 	
 
+}
+
+const char Utilities::getDelimiter() const
+{
+	return m_delimiter;
 }
 
 

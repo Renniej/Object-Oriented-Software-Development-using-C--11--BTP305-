@@ -1,8 +1,17 @@
 // Workshop 9 - Multi-Threading
 // SecureData.cpp
 
+// Name: Tai-Juan Rennie
+// Seneca Student ID: 101359172
+// Seneca email: trennie1@myseneca.ca
+// Date of completion: 11/22/2018
+//
+// I confirm that I am the only author of this file
+// and the content was created entirely by me.
+
 #include <iostream>
 #include <fstream>
+#include <cstring>
 #include <string>
 #include <thread>
 #include <functional>
@@ -67,9 +76,23 @@ namespace w9 {
 	{
 		// TODO: rewrite this function to use at least two threads
 		//         to encrypt/decrypt the text.
-		converter(text, key, nbytes, Cryptor());
+	
+		
+		//auto opposite = [&](bool ec) { ec = !ec; };  //This doesn't work for some reason... idk why
 
-		encoded = !encoded;
+		auto convert = std::bind(converter, text, key, nbytes, Cryptor());
+
+
+		std::thread t1(convert);
+		std::thread t2([this]() { encoded = !encoded; });
+
+	;
+		t1.join();
+		t2.join();
+
+		//encoded = !encoded;
+	
+
 	}
 
 	void SecureData::backup(const char* file) {
@@ -92,6 +115,7 @@ namespace w9 {
 				for (size_t i = 0U; i <= strlen(text); ++i) {
 					_file << text[i];
 				}
+				_file.close();
 
 			}
 

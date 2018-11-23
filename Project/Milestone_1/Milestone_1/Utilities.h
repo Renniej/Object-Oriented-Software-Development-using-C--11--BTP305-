@@ -6,7 +6,7 @@
 
 class Utilities
 {
-	static std::string m_delimiter; // separates the tokens from a given std::string. All Utilities objects share the same delimiter.
+	static  char m_delimiter; // separates the tokens from a given std::string. All Utilities objects share the same delimiter.
 
 	size_t m_widthField; //specifying the length of the token extracted; used for display purpose later; default value is 1.
 	
@@ -16,6 +16,7 @@ public:
 	
 
 	static void setDelimiter(const char c);
+	const char getDelimiter() const;
 
 	void setFieldWidth(size_t size);
 	size_t getFieldWidth() const;

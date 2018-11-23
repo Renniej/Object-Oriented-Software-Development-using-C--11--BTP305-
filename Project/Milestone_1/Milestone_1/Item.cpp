@@ -1,7 +1,14 @@
+// Name: Tai-Juan Rennie
+// Seneca Student ID: 101359172
+// Seneca email: trennie1@myseneca.ca
+// Date of completion: 11/22/2018
+//
+// I confirm that I am the only author of this file
+// and the content was created entirely by me.
 #include "Item.h"
 
 
-size_t Item::m_widthField = 0;
+size_t Item::m_widthField = 1;
 
 void Item::setToEmpty()
 {
@@ -37,17 +44,33 @@ Item::Item(const std::string & str)
 					//std::cout << "m_description : " << m_description << std::endl;
 					break;
 			}
+			if (tmp.getFieldWidth() > m_widthField) {
+
+				//std::cout << "Item m_width : " << m_widthField << std::endl;
+				//std::cout << "Utility m_width : " << tmp.getFieldWidth() << std::endl;
+				//std::cout << "Item m_width changed to : " << tmp.getFieldWidth() << std::endl << std::endl;
+
+				
+				m_widthField = tmp.getFieldWidth();
+			}
 
 		}
 		else {
 			break;
 		}
 
-		if (tmp.getFieldWidth() > m_widthField) {
-			m_widthField = tmp.getFieldWidth();
-		}
-
+		
 	}
+
+	if (tmp.getFieldWidth() > m_widthField) {
+
+		/*std::cout << "Item m_width : " << m_widthField << std::endl;
+		std::cout << "Utility m_width : " << tmp.getFieldWidth() << std::endl;
+		std::cout  << "Item m_width changed to : " << tmp.getFieldWidth() << std::endl << std::endl;*/
+
+		m_widthField = tmp.getFieldWidth();
+	}
+
 	
 
 }
@@ -76,26 +99,15 @@ void Item::updateQuantity()
 void Item::display(std::ostream & os, bool full)
 {
 	//Note: Learn how to format console better.......  (this took me way too long to finish)
-	if (full) {
-
-
+	
+	
 	
 	os << std::setw(m_widthField) << std::left << getName();
-
-			
-		os <<	"[" << std::setw(6) << std::setfill('0') << std::right << m_serialNumber << "] "  << std::setfill(' ') <<
-			
-			"Quantity: " <<  std::setw(m_widthField) << std::left << m_quantity  << 
-			"Description: " << m_description << std::endl;
-
-
+	os  << " [" << std::setw(6) << std::setfill('0') << std::right << m_serialNumber << "]" << std::setfill(' ');
 	
-	}
-	else {
+	full ? os << " Quantity: " << std::setw(m_widthField) << std::left << m_quantity <<
+	" Description: " << m_description << std::endl : os << std::endl;
 
-		os << std::setw(m_widthField) << std::left << getName() << "[" << m_serialNumber << "]" << std::endl;
-	
-	}
 
 }
 

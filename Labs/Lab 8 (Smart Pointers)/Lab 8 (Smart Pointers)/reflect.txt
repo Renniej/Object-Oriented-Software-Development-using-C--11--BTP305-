@@ -1,0 +1,6 @@
+Shared pointer has something akin to a counter that keeps count to how many objects are using it, once that pointer hits 0 it handles it's own deallocation
+Unique pointer only last for the scope it is in.  It can not be copied but it can switch ownership by using the move operator.
+
+weak pointers are shared pointers except they don't add to the static counter.  This is usually done to avoid ownership of the pointer. 
+
+P.S: I've done all the previous workshops ):
