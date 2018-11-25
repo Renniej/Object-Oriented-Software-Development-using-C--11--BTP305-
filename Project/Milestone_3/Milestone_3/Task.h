@@ -1,3 +1,6 @@
+#ifndef TASK_H
+#define TASH_H
+
 #include <vector>
 #include <deque>
 #include "CustomerOrder.h"
@@ -9,7 +12,7 @@ class Task : public Item
 {
 
 	std::deque<CustomerOrder> m_orders; //Queue of customer orders
-	std::shared_ptr<Task> m_pNextTask; //Pointer to next task object (wanted to play around with some smart pointers >:P )
+	Task * m_pNextTask; //Pointer to next task object (wanted to play around with some smart pointers >:P )
 
 public:
 
@@ -20,7 +23,19 @@ public:
 	Task& operator=(Task&& src) = delete;
 
 
+	Task(const std::string& line);
+
+	void runProcess(std::ostream& os);
+	bool moveTask();
+	void setNextTask(Task& nxt_task);
+	bool getCompleted(CustomerOrder& cust_order); //This function might cause issues.....
+
+	void validate(std::ostream& os);
+	
+	Task& operator+=(CustomerOrder&& src);
+
 	Task();
 	~Task();
 };
 
+#endif

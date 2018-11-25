@@ -123,12 +123,14 @@
     <ClCompile Include="..\..\Milestone_1\Milestone_1\Item.cpp" />
     <ClCompile Include="..\..\Milestone_1\Milestone_1\Utilities.cpp" />
     <ClCompile Include="..\..\Milestone_2\Milestone_2\CustomerOrder.cpp" />
+    <ClCompile Include="LineManager.cpp" />
     <ClCompile Include="Task.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Milestone_1\Milestone_1\Item.h" />
     <ClInclude Include="..\..\Milestone_1\Milestone_1\Utilities.h" />
     <ClInclude Include="..\..\Milestone_2\Milestone_2\CustomerOrder.h" />
+    <ClInclude Include="LineManager.h" />
     <ClInclude Include="Task.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
