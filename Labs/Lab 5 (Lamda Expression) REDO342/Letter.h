@@ -1,6 +1,7 @@
 #ifndef SICT_LETTER_H
 #define SICT_LETTER_H
 
+#include <cstring>
 
 namespace sict {
 

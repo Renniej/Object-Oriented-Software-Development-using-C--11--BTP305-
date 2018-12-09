@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <string>
+#include <cstring>
 #include "Letter.h"
 
 namespace sict {

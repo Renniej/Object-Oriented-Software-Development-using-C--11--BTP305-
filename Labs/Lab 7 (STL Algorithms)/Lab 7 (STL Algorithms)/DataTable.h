@@ -1,3 +1,13 @@
+// Name: Tai-Juan Rennie
+// Seneca Student ID: 101359172
+// Seneca email: trennie1@myseneca.ca
+// Date of completion: 10/21/2018
+//
+// I confirm that I am the only author of this file
+// and the content was created entirely by me.
+
+
+
 #ifndef W7_DATATABLE_H
 #define W7_DATATABLE_H
 
@@ -31,7 +41,7 @@ namespace w7 {
 
 		void display(std::ostream& os) const {
 
-			os << std::setw(m_fwidth) << "X" << std::setw(m_fwidth) << "Y" <<std::endl; // set field widths
+			os << std::setw(m_fwidth) << "x" << std::setw(m_fwidth) << "y" <<std::endl; // set field widths
 
 
 			for (size_t i = 0U; i < getSize(); ++i) {
@@ -97,6 +107,7 @@ namespace w7 {
 			slope = (mean_x * mean() - mean_X_t_Y) / ( std::pow(mean_x,2) - mean_Xsq ) ;
 			y_intercept = mean() - slope * mean_x;
 
+			
 		};
 
 		DataTable(std::ifstream& ifs, size_t fwidth, size_t dec) { //Made under the assumption file contains same format at all times

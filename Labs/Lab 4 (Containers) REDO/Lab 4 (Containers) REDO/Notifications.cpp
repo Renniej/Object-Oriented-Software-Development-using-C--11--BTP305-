@@ -1,3 +1,12 @@
+// Name: Tai-Juan Rennie
+// Seneca Student ID: 101359172
+// Seneca email: trennie1@myseneca.ca
+// Date of completion: 10/28/2018
+//
+// I confirm that I am the only author of this file
+// and the content was created entirely by me.
+
+
 #include "Notifications.h"
 
 #define MAX_MESSAGES 10
@@ -14,7 +23,7 @@ namespace w4 {
 	{
 		if (!empty()) {
 
-			for (int i = 0; i < m_Num_Of_Messages; ++i) {
+			for (size_t i = 0U; i < m_Num_Of_Messages; ++i) {
 				m_Msgs[i].Deallocate();
 			}
 
@@ -59,13 +68,14 @@ namespace w4 {
 	{
 
 		if (!empty()) {
-			for (int i = 0; i < m_Num_Of_Messages; ++i) {
+			for (size_t i = 0U; i < m_Num_Of_Messages; ++i) {
 
 				m_Msgs[i].display(os);
-
-				if (i != m_Num_Of_Messages-1) {
+				os << std::endl;
+			/*	if (i != m_Num_Of_Messages-1) {
 					os << std::endl;
-				}
+				} */
+
 			}
 		}
 		else {
@@ -82,7 +92,7 @@ namespace w4 {
 
 			Message * tmp = new Message[m_Num_Of_Messages + 1]; //Create temporary object container to store current messages + spae for incoming message
 
-			for (int i = 0; i < m_Num_Of_Messages; ++i) { //Copy current messsages to current object 
+			for (size_t i = 0U; i < m_Num_Of_Messages; ++i) { //Copy current messsages to current object 
 
 				tmp[i] = m_Msgs[i]; //Call copy assignment Message operator 
 				m_Msgs[i].Deallocate(); //After copy assignment deallocate data in m_Msgs;
@@ -114,7 +124,7 @@ namespace w4 {
 
 			m_Msgs = new Message[m_Num_Of_Messages];
 
-			for (int i = 0; i < m_Num_Of_Messages; ++i) {
+			for (size_t i = 0U; i < m_Num_Of_Messages; ++i) {
 
 				m_Msgs[i] = src.m_Msgs[i];
 

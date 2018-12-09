@@ -38,7 +38,7 @@ CustomerOrder::CustomerOrder(const CustomerOrder & src)
 	throw std::string("ERROR: Cannot make copies.");
 
 
-}
+} 
 
 CustomerOrder::CustomerOrder(CustomerOrder && src) noexcept
 {
@@ -78,9 +78,9 @@ CustomerOrder::CustomerOrder(const std::string & line)
 				do  {
 					ItemInfo tmp_Item(tmp.extractToken(line, next_pos, more)); //extractToken function needs revising when i have time. It's functional but messy  ):
 
-					if (more) {
+					
 						m_lstItem.push_back(std::move(tmp_Item));
-					}
+					
 
 				} while (more);
 
@@ -107,6 +107,11 @@ CustomerOrder::~CustomerOrder()
 
 bool CustomerOrder::getItemFillState(std::string item_name) const //might be able to code this better
 {
+
+	if (item_name.compare("SSD") == 0) {
+		//breakpoint
+	}
+
 
 	bool fillstate = true;
 

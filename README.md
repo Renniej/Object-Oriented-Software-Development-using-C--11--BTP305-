@@ -10,7 +10,7 @@ This repository contains Workshops, Projects, Notes, and other course work for F
 - [x] WS06 - STL Containers
 - [x] WS07 - STL Algorithms
 - [x] WS08 - Smart Pointers
-- [ ] WS09 - Multi-Threading
+- [x] WS09 - Multi-Threading
 
 ### Notes used
 - Main OOP345 Notes: https://scs.senecac.on.ca/~oop345/pages/content/index.html

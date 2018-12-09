@@ -21,23 +21,24 @@ void Task::runProcess(std::ostream & os)
 			m_orders.back().fillItem(*this, os);
 
 		}
+
 	}
 
 }
 
 void Task::setNextTask(Task & nxt_task)
 {
-
+	//std::cout << "setNextTask Called: " << Item::getName() << "--->" << nxt_task.Item::getName() << std::endl;
 	m_pNextTask = &nxt_task;
 }
 
-bool Task::getCompleted(CustomerOrder & cust_order) 
+bool Task::getCompleted(CustomerOrder & cust_order) //this looks like it would cause issues......
 {
 	
-
-	//this looks like it would cause issues......
-	m_orders.pop_back();
-	getCompleted(m_orders.back());
+	if (!m_orders.empty() && m_orders.back().getOrderFillState()) {
+		cust_order = std::move(m_orders.back());
+		m_orders.pop_back();
+	}
 
 	return m_orders.empty() ? false : true;
 
@@ -52,11 +53,22 @@ void Task::validate(std::ostream& os)
 
 }
 
+bool Task::next_tsk_exist() const
+{
+	return m_pNextTask != nullptr;
+}
+
+Task * Task::get_next_Task() const
+{
+	return m_pNextTask;
+}
+
 Task & Task::operator+=(CustomerOrder && src)
 {
 	
 	m_orders.push_front(CustomerOrder(std::move(src)));
 
+	return *this;
 }
 
 bool Task::moveTask()
@@ -67,16 +79,16 @@ bool Task::moveTask()
 			
 			if (m_orders.back().getItemFillState(Item::getName()) == true) { //If ItemFillstate is true 
 
-				m_pNextTask->m_orders.push_front(this->m_orders.back());
+				m_pNextTask->m_orders.push_front(std::move(this->m_orders.back()));
 				m_orders.pop_back();
 
 			}
 		}
 	}
-	else {
+	/*else {
 
-		std::cout << "MOVE TASK: " << "m_pNextTask = nullptr " << std::endl;
-	}
+		//std::cout << "MOVE TASK: " << "m_pNextTask = nullptr " << std::endl;
+	} */
 
 	return m_orders.empty() ? false : true;
 }

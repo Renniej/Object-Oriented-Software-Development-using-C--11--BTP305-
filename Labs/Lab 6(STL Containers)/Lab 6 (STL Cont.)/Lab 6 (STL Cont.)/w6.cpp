@@ -1,4 +1,4 @@
-// Workshop 6 - STL Containers
+﻿// Workshop 6 - STL Containers
 // w6.cpp
 // Updated by cornel on 27.09.2018
 
@@ -79,7 +79,7 @@ int main(int argc, char** argv) {
 	std::cout << "====================================\n";
 
 	double total = 0.0;
-	std::cout << " Product No Taxable\n";
+	std::cout << "      Product No         Taxable\n";
 	std::cout << "------------------------------------\n";
 	for (auto i = 0u; i < products.size(); i++) {
 		total += products[i]->getPrice();
@@ -89,6 +89,7 @@ int main(int argc, char** argv) {
 	std::cout << std::setw(22) << "Total: ";
 	std::cout << std::setw(10) << total << std::endl;
 	std::cout << "====================================\n";
+
 
 	return 0;
 }

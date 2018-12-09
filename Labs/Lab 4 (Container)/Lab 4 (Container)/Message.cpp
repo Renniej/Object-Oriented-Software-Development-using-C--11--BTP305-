@@ -15,7 +15,12 @@ namespace w4 {
 	Message::Message(std::ifstream& ifs, char c)
 	{
 
+		SetToEmpty();
+
 		if (ifs.good()) { //if file is good then prepare message object for input
+			
+			delete[] m_User;
+			delete[] m_Message;
 
 			m_User = nullptr;
 			m_Message = nullptr;
@@ -40,9 +45,7 @@ namespace w4 {
 			}
 	
 		}
-		else { //else set message object to empty state;
-			SetToEmpty();
-		}
+	
 
 
 
@@ -50,7 +53,7 @@ namespace w4 {
 
 	Message::Message(const Message & src)
 	{
-
+	
 		m_User = nullptr;
 		m_Message = nullptr;
 
@@ -107,6 +110,12 @@ namespace w4 {
 	Message::~Message()
 	{
 	
+		delete[] m_User;
+		delete[] m_Message;
+
+		m_User = nullptr;
+		m_Message = nullptr;
+
 	}
 
 	bool Message::empty() const

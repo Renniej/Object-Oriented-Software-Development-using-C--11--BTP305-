@@ -28,7 +28,7 @@ public:
 	const unsigned int getQuantity() const;
 
 	void updateQuantity();
-	void display(std::ostream& os, bool full);
+	void display(std::ostream& os, bool full) const;
 };
 
 #endif

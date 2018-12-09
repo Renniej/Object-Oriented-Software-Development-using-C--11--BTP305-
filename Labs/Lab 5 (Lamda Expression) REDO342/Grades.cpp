@@ -1,5 +1,7 @@
 #include <fstream>
 #include <string>
+#include <cstring>
+
 #include "Grades.h"
 
 

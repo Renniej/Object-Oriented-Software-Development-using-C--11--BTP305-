@@ -1,3 +1,11 @@
+
+// Name: Tai-Juan Rennie
+// Seneca Student ID: 101359172
+// Seneca email: trennie1@myseneca.ca
+// Date of completion: 11/11/2018
+//
+// I confirm that I am the only author of this file
+// and the content was created entirely by me.
 #include <string>
 #include <iostream>
 #include "ProdUtil.h"
@@ -30,7 +38,7 @@ namespace w6 {
 			//iproduct object is taxable or not.
 
 			if (!line.empty()) {
-				for (int i = 0; i < line.size(); ++i) {
+				for (size_t i = 0U; i < line.size(); ++i) {
 
 					if (line.at(i) == ' ') { 
 						//.-. professor made the sales.dat profile purposefuly flawed so I have to check for
@@ -48,7 +56,7 @@ namespace w6 {
 					tmp = new Product(line.substr(0, line.find(" ")).c_str(), std::stod(line.substr(line.find(" "), line.back())));
 					//tmp->display(std::cout);
 				}
-				else if (Spaces = 2) {
+				else if (Spaces == 2) {
 
 					std::string Tax_Code(line.substr(line.find_last_of(" ") + 1, line.back()));  //Grab taxcode from line
 

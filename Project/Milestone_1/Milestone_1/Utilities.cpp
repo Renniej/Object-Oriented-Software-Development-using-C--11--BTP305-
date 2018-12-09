@@ -34,6 +34,8 @@ const std::string Utilities::extractToken(const std::string & str, size_t & next
 		tmp = tmp.substr(next_pos); //create substring starting at next_pos
 
 		if (tmp.find(m_delimiter) != std::string::npos) { //If a delimiter exist then extract data, else assume ur are on last part of string line and extract last bit of data
+			
+			more = true;
 
 			tmp = tmp.substr(0, tmp.find(m_delimiter));
 
@@ -42,6 +44,11 @@ const std::string Utilities::extractToken(const std::string & str, size_t & next
 				m_widthField = tmp.length();
 				//std::cout << "Utility Length changed to : " << m_widthField << std::endl << std::endl;
 			}
+
+		}
+		else {
+
+			tmp = tmp.substr(0, tmp.length());
 
 		}
 		
@@ -63,7 +70,7 @@ const std::string Utilities::extractToken(const std::string & str, size_t & next
 		next_pos = next_pos + tmp.length() + 1;
 		//std::cout << "Next Position changed to : " << next_pos << std::endl;
 
-		more = true;
+		
 		
 
 

@@ -96,7 +96,9 @@ void Item::updateQuantity()
 	--m_quantity;
 }
 
-void Item::display(std::ostream & os, bool full)
+
+
+void Item::display(std::ostream & os, bool full) const
 {
 	//Note: Learn how to format console better.......  (this took me way too long to finish)
 	

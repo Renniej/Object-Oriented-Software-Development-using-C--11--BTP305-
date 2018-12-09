@@ -1,5 +1,14 @@
  // Workshop 8 - Smart Pointers
  // List.h
+ 
+ // Name: Tai-Juan Rennie
+// Seneca Student ID: 101359172
+// Seneca email: trennie1@myseneca.ca
+// Date of completion: 11/22/2018
+//
+// I confirm that I am the only author of this file
+// and the content was created entirely by me.
+
 #ifndef W8_LIST_H
 #define W8_LIST_H
 

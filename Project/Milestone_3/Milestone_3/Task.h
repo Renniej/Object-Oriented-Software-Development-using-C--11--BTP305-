@@ -1,5 +1,5 @@
 #ifndef TASK_H
-#define TASH_H
+#define TASK_H
 
 #include <vector>
 #include <deque>
@@ -31,7 +31,8 @@ public:
 	bool getCompleted(CustomerOrder& cust_order); //This function might cause issues.....
 
 	void validate(std::ostream& os);
-	
+	bool next_tsk_exist() const;
+	Task * get_next_Task() const;
 	Task& operator+=(CustomerOrder&& src);
 
 	Task();

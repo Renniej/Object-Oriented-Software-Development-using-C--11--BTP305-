@@ -30,6 +30,9 @@
     <ClCompile Include="LineManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ms3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Milestone_1\Milestone_1\Utilities.h">
